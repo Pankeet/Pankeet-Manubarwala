@@ -44,7 +44,7 @@ export default function IntroBody_sm({theme}){
         <div className='col-span-1 grid place-content-center'>
             <div className={`ml-1 text-md inline-block max-w-48 break-words ${theme ? "text-blue-950" : "text-slate-200"}`}>
               <Typewriter 
-                words={['C++ Programmer' , 'Jr. Software Developement Engineer', 'Computer Engineer' , 'Full Stack Developer' ]}
+                words={['C++ Programmer' , 'Software Developer', 'Computer Engineer' , 'Full Stack Developer' ]}
                 loop={true}
                 cursor
                 cursorStyle='|'
