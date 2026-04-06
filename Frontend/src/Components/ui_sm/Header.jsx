@@ -4,7 +4,6 @@ import { Sidebar } from "../icons/sidebar";
 import { Close } from "../icons/Close";
 import { useState } from 'react';
 import Lottie from "lottie-react";
-//import animationData from "../../assets/loader.json";
 
 export default function Header_sm({ theme, setheme }) {
   const [sidebaropen, setsidebaropen] = useState(false);
@@ -87,7 +86,6 @@ export default function Header_sm({ theme, setheme }) {
             target='_blank' 
             className='bg-gray-800 rounded-lg px-4 py-3'
             rel='noopener noreferrer'>
-            {/* <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 40, height: 40 }}/><span>Contact</span> */}
             Contact</a>
 
           </nav>

@@ -42,7 +42,7 @@ export default function IntroBody_sm({theme}){
       </Helmet>
       <div className='grid grid-cols-2 mt-7 ml-3'>
         <div className='col-span-1 grid place-content-center'>
-            <div className={`ml-1 text-md inline-block max-w-48 break-words bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "to-purple-400 from-purple-600"}`}>
+            <div className={`ml-1 text-md inline-block max-w-48 break-words ${theme ? "text-blue-950" : "text-slate-200"}`}>
               <Typewriter 
                 words={['C++ Programmer' , 'Jr. Software Developement Engineer', 'Computer Engineer' , 'Full Stack Developer' ]}
                 loop={true}

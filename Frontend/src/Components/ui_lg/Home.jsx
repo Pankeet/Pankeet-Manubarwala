@@ -32,28 +32,28 @@ export default function IntroBody_lg({theme}){
     return (
       <div className='lg:h-screen w-full'>
         <Helmet>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="A comprehensive presentation of my professional identity, technical skill set, and practical experience" />
-        <meta property="og:title" content="Pankeet | Software Development Engineer" />
-        <meta property="og:description" content="Get to know me , my side hustles, and my TechStack" />
-        <meta property="og:image" content="https://pankeet-manubarwala.vercel.app/img/Logo.png" />
-        <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/" />
-      </Helmet>
+          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="description" content="A comprehensive presentation of my professional identity, technical skill set, and practical experience" />
+          <meta property="og:title" content="Pankeet | Software Development Engineer" />
+          <meta property="og:description" content="Get to know me , my side hustles, and my TechStack" />
+          <meta property="og:image" content="https://pankeet-manubarwala.vercel.app/img/Logo.png" />
+          <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/" />
+        </Helmet>
       <div className="mt-20 grid grid-cols-11">
       <div className='grid place-content-center col-span-6'>
-        <div className = {`max-w-96 lg:text-2xl md:text-md text-sm font-semibold mb-1 bg-gradient-to-r bg-clip-text text-transparent ${theme ? "from-blue-950 to-blue-700" : "to-purple-400 from-purple-600"}`}>
-          <div className='ml-1 inline-block w-full leading-snug break-words'>
-          <Typewriter 
-            words={['C++ Programmer' , 'Jr. Software Developement Engineer', 'Computer Engineer' , 'Full Stack Developer' ]}
-            loop={true}
-            cursor
-            cursorStyle='|'
-            typeSpeed={90}
-            deleteSpeed={60}
-            delaySpeed={2000}></Typewriter>
-          </div>
-            </div>
+        <div className = 'max-w-96 lg:text-2xl text-lg   font-semibold mb-1'>
+          <span className={`ml-1 ${theme ? "text-blue-950" : "text-slate-200"}`}>
+            <Typewriter 
+              words={['C++ Programmer' , 'Software Developer', 'Computer Engineer' , 'Full Stack Developer' ]}
+              loop={true}
+              cursor
+              cursorStyle='|'
+              typeSpeed={90}
+              deleteSpeed={60}
+              delaySpeed={2000}></Typewriter>
+          </span>
+        </div>
       <div className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
       <div className = {`myName text-6xl  font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
       </div>
