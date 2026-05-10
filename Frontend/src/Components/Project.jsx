@@ -3,15 +3,22 @@ import { Helmet } from "react-helmet"
 export default function ScrollTriggered() {
     return (
         <div style={container}>
+
             <Helmet>
-                <title>Pankeet's Projects</title>
+                <title>Pankeet Manubarwala | Full Stack Developer Projects</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta name="description" content="Explore Pankeet's portfolio with full-stack projects, clean design, and functionally-fueled code." />
+                <meta name="description" content="Explore full-stack projects built by Pankeet Manubarwala using React, Next.js, TypeScript, WebSockets, Prisma, and modern backend systems." />
+                <meta name="keywords" content="Pankeet, Pankeet Manubarwala, Full Stack Developer, React Developer, Next.js Projects, TypeScript, WebSockets, Portfolio, Software Engineer" />
+                <meta name="author" content="Pankeet Manubarwala" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://pankeet-manubarwala.vercel.app/projects" />
                 <meta property="og:title" content="Pankeet | Full Stack Developer" />
                 <meta property="og:image" content="https://pankeet-manubarwala.vercel.app/img/Logo.png" />
-                <meta property="og:description" content="Take a peek at my best dev work, side hustles, and experiments in caffeine-fueled creativity." />
+                <meta property="og:description" content="Real-world full-stack projects featuring modern UI, scalable backend systems, authentication, WebSockets, and collaborative applications." />
                 <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/projects" />
             </Helmet>
+
             {homepageSections.map(({content, hueA, hueB, i , href}) => (
                 <Card i={i} content={content} hueA={hueA} hueB={hueB} href={href} key={i} />
             ))}
@@ -23,7 +30,11 @@ function Card({ content , hueA, hueB, i , href }) {
     const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
 
     return (
-        <a href={href} target="_blank" style={{ textDecoration: "none"}} >
+        <a 
+            href={href} 
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none"}} >
         <motion.div
             className={`card-container-${i}`}
             style={cardContainer}
@@ -106,32 +117,39 @@ const card = {
  */
 
 const homepageSections = [
-    { content: <Ivy />, hueA: 250, hueB: 280  , href:"https://ivy-academy.vercel.app/"},
-    { content: <Zeroh />, hueA: 250, hueB: 280 , href:"https://zerohda.vercel.app/"},
+    { content: <ExcalDraw />,  hueA: 250, hueB: 280  , href:"https://excal-draw.vercel.app/" },
     { content: <Socket />, hueA: 250, hueB: 280 , href:"https://socket-talk-liart.vercel.app/"},
     { content: <Neuro />, hueA: 250, hueB: 280 , href:"https://neuro-nest-eta.vercel.app/" },
+    { content: <Ivy />, hueA: 250, hueB: 280  , href:"https://ivy-academy.vercel.app/"},
+    { content: <Zeroh />, hueA: 250, hueB: 280 , href:"https://zerohda.vercel.app/"}
 ];
 
 function Ivy(){
     return (
-        <img src="/img/Ivy.png" alt="Ivy" className="w-72 h-72" />
+        <img src="/img/Ivy.png" alt="Ivy Academy:- Educational Platform" className="w-72 h-72" loading="lazy"/>
     )
 }
 
 function Zeroh(){
     return(
-        <img src="/img/Zeroh.png" alt="Zerohda" className="w-72 h-72" />
+        <img src="/img/Zeroh.png" alt="Zeroh Trading Dashboard" className="w-72 h-72" loading="lazy"/>
     )
 }
 
 function Socket(){
     return(
-        <img src="/img/Socket.png" alt="Socket" className="w-72 h-72" />
+        <img src="/img/Socket.png" alt="Socket Talk :- Real Time Chat Application" className="w-72 h-72" />
     )
 }
 
 function Neuro(){
     return(
-        <img src="/img/Neuro.png" alt="Neuro" className="w-72 h-72" />
+        <img src="/img/Neuro.png" alt="Neuro Nest:- Second Brain Application" className="w-72 h-72" loading="lazy"/>
+    )
+}
+
+function ExcalDraw(){
+    return (
+        <img src="/img/excal.png" alt="Excal.Draw:- Collaborative Drawing App" className="w-72 h-72" />
     )
 }
