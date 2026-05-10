@@ -66,7 +66,7 @@ export default function IntroBody_lg({theme}){
        <div className={`myIntro mx-36 mt-3 flex gap-5 font-serif text-xl `}>
        <a href="/files/Pankeet_Resume.pdf" 
           download
-          target="_blank" s
+          target="_blank"
           className="aboutCSS" >
             Download Resume 
         </a>

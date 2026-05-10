@@ -17,6 +17,7 @@
     "gsap": "^3.13.0",
     "lottie-react": "^2.4.1",
     "motion": "^12.12.1",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",

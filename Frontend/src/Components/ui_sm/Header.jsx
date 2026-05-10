@@ -81,7 +81,6 @@ export default function Header_sm({ theme, setheme }) {
             </Link>
 
             <a href='https://contact-me-flax-nu.vercel.app/' 
-            role='button'
             aria-label='Open Contact Page'
             target='_blank' 
             className='bg-gray-800 rounded-lg px-4 py-3'
