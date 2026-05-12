@@ -10,7 +10,7 @@
   }
 
 .headerCSS {
-  @apply mr-10 ml-10 cursor-pointer text-center; 
+  @apply cursor-pointer text-center; 
   
 }
 

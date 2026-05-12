@@ -1,4 +1,3 @@
-import { FaGithub , FaLinkedin } from "react-icons/fa";
 import { FaReact , FaJava , FaPython , FaNodeJs , FaHtml5 , FaCss3 , FaGit , FaAngular } from "react-icons/fa";
 import cpp from "/img/cpp.svg";
 import next from "/img/nextjs.svg";
@@ -20,21 +19,13 @@ export default function AboutMe_lg(){
                 <div>
                     <div className="text-lg text-justify mr-20 mt-6 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-6">      
                         <p>
-                           <i>Welcome to my portfolio.</i> I'm Pankeet, a 21-year-old Computer Science 
-                           undergraduate with a strong passion for Software Development, System Design, and 
-                           Product Management. I specialise in the MERN stack and Data Structures and Algorithms.
-                        </p> 
-                         <p>
-                         My skill set includes wireframing, problem-solving, front-end implementation, and 
-                         rigorous testing—ensuring that every piece of software is both flawless and 
-                         functionally robust. I have worked on a diverse range of projects, including mobile 
-                         applications, web platforms, and interactive dashboards—each centred around user-focused 
-                         design that fosters engagement.
-                         </p>
+                            <i>Welcome to my portfolio.</i> I'm Pankeet, a Computer Science graduate passionate about building scalable full-stack applications with Next.js and Turborepo . I also enjoy solving complex problems using Data Structures and Algorithms.
+                        </p>
                         <p>
-                        My long-term ambition is to master advanced algorithms, particularly Dynamic Programming. 
-                        I approach every project with unwavering commitment, precision, and a drive to deliver 
-                        intuitive, high-performance user experiences.
+                            My experience spans wireframing, front-end and back-end development, and application testing, allowing me to build software that is both intuitive and dependable. I've developed web platforms, and interactive dashboards with a strong focus on scalability, usability, and performance.
+                        </p>
+                        <p>
+                            I'm constantly improving my problem-solving skills and exploring advanced algorithms, especially Dynamic Programming. I approach every project with attention to detail and a focus on building intuitive, high-performance user experiences.
                         </p>
                     </div>
                 </div>

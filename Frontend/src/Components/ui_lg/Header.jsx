@@ -49,13 +49,13 @@ export default function Header_lg({ theme, setheme }) {
 
   if (loading) {
     return (
-      <div className='h-screen w-full flex justify-center items-center bg-white dark:bg-black'>
+      <div className={`h-screen w-full flex justify-center items-center ${theme ? "bg-white" : "bg-black"}`}>
         <Loader />
       </div>
     );
   } else {
     return (
-      <main ref={animate} className="font-serif flex text-xl mt-3 mb-1 mx-3 pb-2"> 
+      <main ref={animate} className={`font-serif px-7 py-3 flex gap-20 items-center w-fit fixed top-6 left-1/2 z-20 -translate-x-1/2 text-xl backdrop-blur-md border ${theme ? "border-black bg-white/10" : "border-white/40 bg-black/30 "} shadow-xl rounded-2xl`}> 
         <div> 
           <Link to="/" className='headerCSS'>
             <span className={`${location.pathname === '/' ? 'activeHeader' : ''} hover:text-red-400 hover:border-b-2 hover:border-b-red-400`}>
@@ -86,7 +86,7 @@ export default function Header_lg({ theme, setheme }) {
           </a>
         </div>
 
-        <div className='ml-auto mr-10'>
+        <div>
           <button
            aria-label="Toggle Light-Dark theme"
             className="toggle-container"

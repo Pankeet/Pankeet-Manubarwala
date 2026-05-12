@@ -1,4 +1,3 @@
-import { FaGithub , FaLinkedin } from "react-icons/fa";
 import { FaReact , FaJava , FaPython , FaNodeJs , FaHtml5 , FaCss3 , FaGit , FaAngular } from "react-icons/fa";
 import cpp from "/img/cpp.svg";
 import next from "/img/nextjs.svg";
@@ -22,7 +21,7 @@ export default function AboutMe_sm(){
                     <div className="text-sm font-sans text-justify mx-7 bg-gradient-to-l bg-clip-text text-transparent from-[#B253FC] to-[#551AF3] space-y-4">      
                         <p>
                            <i>Welcome to my portfolio.</i> I'm Pankeet, a Software Development Engineer, System Designer, and 
-                           Full Stack Developer. I specialize in Mern Stack, enabling seamless cross-platform web-app development and Data Structures and Algorithms.
+                           Full Stack Developer. I specialize in Next.js and turborepo, enabling seamless cross-platform web-app development. I have a strong hold on Data Structures and Algorithms.
                            My long-term ambition is to master advanced algorithms
                         </p> 
                         <p>
@@ -31,7 +30,7 @@ export default function AboutMe_sm(){
                         <p>
                             B.Tech in Computer Science and Engineering with specialization in IOT <br />
                             G H Patel College of Engineering and Technology <br />
-                            <b>2022 - 2026 | CGPA :- 9.20</b>
+                            <b>2022 - 2026 | CGPA :- 9.26</b>
                         </p>
                     </div>
                     </div>
