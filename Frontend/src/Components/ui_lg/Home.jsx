@@ -3,7 +3,13 @@ import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub , FaLinkedin } from 'react-icons/fa';
 import { useLayoutEffect } from 'react';
 import { Helmet } from 'react-helmet';
-export default function IntroBody_lg({theme}){
+import PropTypes from 'prop-types';
+
+IntroBodyLg.propTypes = {
+  theme: PropTypes.bool.isRequired
+};
+
+export default function IntroBodyLg({theme}){
 
   useLayoutEffect(()=>{
     const tl = gsap.timeline();
@@ -41,7 +47,7 @@ export default function IntroBody_lg({theme}){
           <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/" />
         </Helmet>
       <div className="mt-20 grid grid-cols-11">
-      <div className='grid place-content-center col-span-6'>
+      <main className='grid place-content-center col-span-6'>
         <div className = 'max-w-96 lg:text-2xl text-lg   font-semibold mb-1'>
           <span className={`ml-1 ${theme ? "text-blue-950" : "text-slate-200"}`}>
             <Typewriter 
@@ -54,9 +60,9 @@ export default function IntroBody_lg({theme}){
               delaySpeed={2000}></Typewriter>
           </span>
         </div>
-      <div className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
-      <div className = {`myName text-6xl  font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
-      </div>
+        <div className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
+        <div className = {`myName text-6xl  font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
+      </main>
       <div className = "col-span-5 grid place-content-center">
         <video autoPlay loop muted alt="SDE" className={`imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>
           <source src="/vid/Sde.mp4"></source>

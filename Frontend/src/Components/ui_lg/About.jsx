@@ -4,9 +4,10 @@ import next from "/img/nextjs.svg";
 import mongo from "/img/mongodb.png";
 import tsc from "/img/typescript.svg";
 import Bot  from "/img/GptBot.png";
-export default function AboutMe_lg(){
+
+export default function AboutMeLg(){
     return (
-        <div className="h-screen w-full grid grid-cols-4 font-serif">
+        <main className="h-screen w-full grid grid-cols-4 font-serif">
             <div className="col-span-2 flex justify-center items-center">
                 <img src={Bot} alt="Software Engineer" className="size-96 shadow-xl shadow-[#631FF0] rounded-xl" />
             </div>
@@ -49,6 +50,6 @@ export default function AboutMe_lg(){
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

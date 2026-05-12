@@ -3,7 +3,12 @@ import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub , FaLinkedin } from 'react-icons/fa';
 import { useLayoutEffect } from 'react';
 import { Helmet } from 'react-helmet';
-export default function IntroBody_sm({theme}){
+import PropTypes from "prop-types";
+
+IntroBodySm.propTypes = {
+  theme: PropTypes.bool.isRequired
+};
+export default function IntroBodySm({theme}){
 
   useLayoutEffect(()=>{
     const tl = gsap.timeline();
@@ -41,7 +46,7 @@ export default function IntroBody_sm({theme}){
         <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/" />
       </Helmet>
       <div className='grid grid-cols-2 mt-7 ml-3'>
-        <div className='col-span-1 grid place-content-center'>
+        <main className='col-span-1 grid place-content-center'>
             <div className={`ml-1 text-md inline-block max-w-48 break-words ${theme ? "text-blue-950" : "text-slate-200"}`}>
               <Typewriter 
                 words={['C++ Programmer' , 'Software Developer', 'Computer Engineer' , 'Full Stack Developer' ]}
@@ -58,7 +63,7 @@ export default function IntroBody_sm({theme}){
                 <div className = {`myName md:text-4xl text-3xl font-bold bg-gradient-to-r 
                   ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
               </div>
-        </div>
+        </main>
 
         <div className='col-span-1 grid place-content-center mt-3'>
           <video autoPlay loop muted alt="SDE" className={`imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>

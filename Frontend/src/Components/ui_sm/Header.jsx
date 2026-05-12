@@ -3,9 +3,14 @@ import { motion } from "framer-motion";
 import { Sidebar } from "../icons/sidebar";
 import { Close } from "../icons/Close";
 import { useState } from 'react';
-import Lottie from "lottie-react";
+import PropTypes from "prop-types";
 
-export default function Header_sm({ theme, setheme }) {
+HeaderSm.propTypes = {
+  theme: PropTypes.bool.isRequired,
+  setheme: PropTypes.func.isRequired,
+};
+
+export default function HeaderSm({ theme, setheme }) {
   const [sidebaropen, setsidebaropen] = useState(false);
 
   function ldmode() {

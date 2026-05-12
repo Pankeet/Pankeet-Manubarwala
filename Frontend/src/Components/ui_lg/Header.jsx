@@ -5,12 +5,12 @@ import Loader from '../animate/lottie';
 import { useLayoutEffect, useRef, useState } from 'react';
 import PropTypes from "prop-types";
 
-Header_lg.propTypes = {
+HeaderLg.propTypes = {
   theme: PropTypes.bool.isRequired,
   setheme: PropTypes.func.isRequired,
 };
 
-export default function Header_lg({ theme, setheme }) {
+export default function HeaderLg({ theme, setheme }) {
 
   const location = useLocation();
   const animate = useRef();

@@ -4,9 +4,10 @@ import next from "/img/nextjs.svg";
 import mongo from "/img/mongodb.png";
 import tsc from "/img/typescript.svg";
 import Bot  from "/img/GptBot.png";
-export default function AboutMe_sm(){
+
+export default function AboutMeSm(){
     return (
-        <div className="w-full mt-10 mb-10">
+        <main className="w-full mt-10 mb-10">
             <div>
             <span className="text-2xl text-purple-700 mx-12">
                 <b>About Me :-</b>
@@ -28,8 +29,8 @@ export default function AboutMe_sm(){
                             <b><i>Education :-</i></b>
                         </p>
                         <p>
-                            B.Tech in Computer Science and Engineering with specialization in IOT <br />
-                            G H Patel College of Engineering and Technology <br />
+                            Graduate in Bachelor of Technology in Computer Science and Engineering with specialization in IOT <br />
+                            G H Patel College of Engineering and Technology under CVM university <br />
                             <b>2022 - 2026 | CGPA :- 9.26</b>
                         </p>
                     </div>
@@ -52,6 +53,6 @@ export default function AboutMe_sm(){
                 <FaJava className="text-4xl"/>
                 <FaPython className="text-4xl"/>
             </div>
-        </div>
+        </main>
     )
 }

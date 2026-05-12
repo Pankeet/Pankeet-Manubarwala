@@ -1,12 +1,12 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { Suspense, lazy } from "react";
-import Header_lg from "./Components/ui_lg/Header";
-import Header_sm from "./Components/ui_sm/Header";
-import IntroBody_lg from './Components/ui_lg/Home';
-import AboutMe_lg from "./Components/ui_lg/About";
-import IntroBody_sm from './Components/ui_sm/Home';
-import AboutMe_sm from "./Components/ui_sm/About";
+import HeaderLg from "./Components/ui_lg/Header";
+import HeaderSm from "./Components/ui_sm/Header";
+import IntroBodyLg from './Components/ui_lg/Home';
+import AboutMeLg from "./Components/ui_lg/About";
+import IntroBodySm from './Components/ui_sm/Home';
+import AboutMeSm from "./Components/ui_sm/About";
 import Loader from './Components/animate/lottie';
 const ScrollTriggered = lazy(() => import('./Components/Project'));
 
@@ -16,21 +16,21 @@ function App() {
   const [theme, setheme] = useState();
 
   useEffect(() => {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDarkMode = globalThis.matchMedia('(prefers-color-scheme: dark)').matches;
     if (isDarkMode) setheme(false);
     else setheme(true);
   }, []);
 
-  const screen_small = window.matchMedia('(max-width: 767px)').matches;
+  const screen_small = globalThis.matchMedia('(max-width: 767px)').matches;
 
   return (
     <Router>
-      <div role='main' className={`overflow-x-hidden h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-950' : 'bg-gradient-to-r from-gray-950 to-black text-[#ece9e2]'}`}>
-        {!screen_small && <Header_lg setheme={setheme} theme={theme} /> }
-        {screen_small && <Header_sm setheme={setheme} theme={theme} />}
+      <div className={`overflow-x-hidden h-screen w-full ${theme ? 'bg-[#ece9e2] text-gray-950' : 'bg-gradient-to-r from-gray-950 to-black text-[#ece9e2]'}`}>
+        {!screen_small && <HeaderLg setheme={setheme} theme={theme} /> }
+        {screen_small && <HeaderSm setheme={setheme} theme={theme} />}
         <Suspense fallback={<div className='font-serif text-red-500 text-xl'>Loading Projects...</div>}>
           <Routes>
-            <Route path="/" element={<>{screen_small ? (<><IntroBody_sm theme={theme} /><AboutMe_sm theme={theme} /></>) : (<><IntroBody_lg theme={theme} /><AboutMe_lg theme={theme} /></>)}</>}/>
+            <Route path="/" element={<>{screen_small ? (<><IntroBodySm theme={theme} /><AboutMeSm theme={theme} /></>) : (<><IntroBodyLg theme={theme} /><AboutMeLg theme={theme} /></>)}</>}/>
             <Route path="/projects" element={<Suspense fallback={<Loader />}><ScrollTriggered /></Suspense>}/>
             <Route path="*" element={<ErrorPage />}
             />
@@ -43,7 +43,7 @@ function App() {
 
 function ErrorPage(){
 return (
-        <div role='main' className="text-center px-4 flex items-center justify-center h-screen font-sans">
+        <main className="text-center px-4 flex items-center justify-center h-screen font-sans">
             <div className='mr-12'>
               <h1 className="text-8xl font-extrabold tracking-tight text-purple-700 drop-shadow-lg">404</h1>
               <p className="text-2xl mt-4 font-semibold">Oops! Page not found</p>
@@ -54,7 +54,7 @@ return (
                 🏠 Back to Home
               </a>
             </div>
-          </div>
+          </main>
               )
 }
 
