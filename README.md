@@ -4,12 +4,12 @@ This project showcases my skills, projects, and experience as a developer.
 
 ---
 
-## 🔥 Live Demo
-👉 https://pankeet-manubarwala.vercel.app
+## Live Demo
+https://pankeet-manubarwala.vercel.app
 
 ---
 
-## 📌 About The Web App
+##  About The Web App
 This is a modern, responsive portfolio website built to highlight my:
 - Projects
 - Skills
@@ -20,14 +20,14 @@ Designed with a clean UI and smooth user experience.
 
 ---
 
-## ✨ Features
+## Features
 
-- ⚡ Fully responsive design
-- 🎨 Clean and modern UI
-- 📁 Project showcase section
-- 🧠 About me section
-- 📬 Contact form / social links
-- 🚀 Fast performance
+- Fully responsive design
+- Clean and modern UI
+- Project showcase section
+- About me section ( at home page )
+- Contact form / social links
+- Fast performance
 
 ---
 
@@ -35,12 +35,12 @@ Designed with a clean UI and smooth user experience.
 
 - **Frontend:**  React
 - **Styling:** Tailwind CSS 
-- **Backend :** Node.js / API routes
+- **Backend :** Node.js / API routes ( contact me page )
 - **Other Tools:** Git, GitHub
 
 ---
 
-## 📦 Installation
+## Installation
 
 - Clone the repository:
 
@@ -57,7 +57,7 @@ npm install
 
 ---
 
-## ▶️ Run Locally
+## Run Locally
 
 ```bash
 npm run dev
@@ -65,18 +65,18 @@ npm run dev
 
 Open in browser:
 ```
-http://localhost:3000
+http://localhost:5173
 ```
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal project, but suggestions and feedback are welcome!
 
 ---
 
-## 📬 Contact Me
+## Contact Me
 
 - LinkedIn: https://linkedin.com/in/pankeet04
 - Email: pankeet04@gmail.com
