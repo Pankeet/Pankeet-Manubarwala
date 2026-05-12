@@ -63,13 +63,13 @@ export default function IntroBodyLg({theme}){
         <div className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
         <div className = {`myName text-6xl  font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
       </main>
-      <div className = "col-span-5 grid place-content-center">
+      <div className = "col-span-5 grid place-content-center pt-20">
         <video autoPlay loop muted alt="SDE" className={`imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>
           <source src="/vid/Sde.mp4"></source>
         </video>
       </div>
       </div>
-       <div className={`myIntro mx-36 mt-3 flex gap-5 font-serif text-xl `}>
+       <div className={`myIntro mx-36 flex gap-5 font-serif text-xl `}>
        <a href="/files/Pankeet_Resume.pdf" 
           download
           target="_blank"
@@ -82,7 +82,7 @@ export default function IntroBodyLg({theme}){
             View Experience
         </a>
        </div>
-       <div className="techLinks flex justify-start lg:mx-36 lg:mt-10 items-center gap-3 mx-16 mt-7">
+       <div className="techLinks flex justify-start mx-36 mt-9 items-center gap-4">
                     <a aria-label='Open my Github' href="https://github.com/Pankeet" target="_blank" rel="noopener noreferrer" className={`${theme ? "text-black hover:text-gray-500" : " text-white hover:text-gray-400"} transition duration-200`}>
                         <FaGithub className="w-9 h-9" />
                     </a>

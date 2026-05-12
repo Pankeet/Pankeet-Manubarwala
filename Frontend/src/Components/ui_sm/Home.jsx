@@ -66,7 +66,7 @@ export default function IntroBodySm({theme}){
         </main>
 
         <div className='col-span-1 grid place-content-center mt-3'>
-          <video autoPlay loop muted alt="SDE" className={`imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>
+          <video autoPlay loop muted alt="Software Developer" className={`imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>
             <source src="/vid/Sde.mp4"></source>
           </video>
         </div>
@@ -76,7 +76,7 @@ export default function IntroBodySm({theme}){
           <div>
             <a href="/files/Pankeet_Resume.pdf" 
                 download
-                target="_blank" s
+                target="_blank"
                 className="aboutCSS mx-16" >
                   Download Resume 
               </a>
