@@ -38,9 +38,9 @@ export default function HeaderSm({ theme, setheme }) {
     <>
       {!sidebaropen && (
         <div className="flex justify-between mx-5 my-4">
-          <div className="flex items-center" onClick={() => setsidebaropen(true)}>
+          <button className="flex items-center" onClick={() => setsidebaropen(true)}>
             <Sidebar />
-          </div>
+          </button>
           <div className="flex items-center">
             <button
             aria-label='toggle page theme'
@@ -68,9 +68,9 @@ export default function HeaderSm({ theme, setheme }) {
 
       {sidebaropen && (
         <div>
-          <div className='flex justify-end items-center my-4 mx-5' onClick={() => setsidebaropen(false)}>
+          <button className='flex justify-end items-center my-4 mx-5' onClick={() => setsidebaropen(false)}>
             <Close />
-          </div>
+          </button>
           <div className='h-screen w-full grid place-content-center text-2xl text-purple-600'>
           <nav className='flex-col flex gap-5'>
             <Link to='/'
@@ -85,7 +85,7 @@ export default function HeaderSm({ theme, setheme }) {
               Project
             </Link>
 
-            <a href='https://contact-me-flax-nu.vercel.app/' 
+            <a href='https://contact-pankeet.vercel.app/' 
             aria-label='Open Contact Page'
             target='_blank' 
             className='bg-gray-800 rounded-lg px-4 py-3'

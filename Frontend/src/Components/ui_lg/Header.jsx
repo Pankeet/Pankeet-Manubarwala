@@ -55,7 +55,7 @@ export default function HeaderLg({ theme, setheme }) {
     );
   } else {
     return (
-      <main ref={animate} className={`font-serif px-7 py-3 flex gap-20 items-center w-fit fixed top-6 left-1/2 z-20 -translate-x-1/2 text-xl backdrop-blur-md border ${theme ? "border-black bg-white/10" : "border-white/40 bg-black/30 "} shadow-xl rounded-2xl`}> 
+      <header ref={animate} className={`font-serif px-7 py-3 flex gap-20 items-center w-fit fixed top-6 left-1/2 z-20 -translate-x-1/2 text-xl backdrop-blur-md border ${theme ? "border-black bg-white/10" : "border-white/40 bg-black/30 "} shadow-xl rounded-2xl`}> 
         <div> 
           <Link to="/" className='headerCSS'>
             <span className={`${location.pathname === '/' ? 'activeHeader' : ''} hover:text-red-400 hover:border-b-2 hover:border-b-red-400`}>
@@ -72,12 +72,12 @@ export default function HeaderLg({ theme, setheme }) {
         </div>
         <div>
           <a aria-label="Open contact page"
-            href="https://contact-me-flax-nu.vercel.app/"
+            href="https://contact-pankeet.vercel.app/"
             onClick={(e) => {
              e.preventDefault();
              setLoading(true); 
              setTimeout(() => {
-              globalThis.location.href = "https://contact-me-flax-nu.vercel.app/";
+              globalThis.location.href = "https://contact-pankeet.vercel.app/";
              },1600)
             }}
             className='headerCSS hover:text-red-400 hover:border-b-2 hover:border-b-red-400'
@@ -108,7 +108,7 @@ export default function HeaderLg({ theme, setheme }) {
             />
           </button>
         </div>
-      </main>
+      </header>
     );
   }
 }
