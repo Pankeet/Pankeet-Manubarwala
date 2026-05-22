@@ -117,6 +117,7 @@ const card = {
  */
 
 const homepageSections = [
+    { content: <BetterUptime />, hueA: 250, hueB: 280  , href:"https://better-uptime-ochre.vercel.app/"},
     { content: <ExcalDraw />,  hueA: 250, hueB: 280  , href:"https://excal-draw.vercel.app/" },
     { content: <Socket />, hueA: 250, hueB: 280 , href:"https://socket-talk-liart.vercel.app/"},
     { content: <Neuro />, hueA: 250, hueB: 280 , href:"https://neuro-nest-eta.vercel.app/" },
@@ -151,5 +152,11 @@ function Neuro(){
 function ExcalDraw(){
     return (
         <img src="/img/excal.png" alt="Excal.Draw:- Collaborative Drawing App" className="w-72 h-72" />
+    )
+}
+
+function BetterUptime(){
+    return (
+        <img src="/img/better-uptime.png" alt="Better-Uptime" className="w-72 h-72" />
     )
 }
