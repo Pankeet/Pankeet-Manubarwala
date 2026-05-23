@@ -31,7 +31,7 @@ function App() {
         <Suspense fallback={<div className='font-serif text-red-500 text-xl'>Loading Projects...</div>}>
           <Routes>
             <Route path="/" element={<>{screen_small ? (<><IntroBodySm theme={theme} /><AboutMeSm theme={theme} /></>) : (<><IntroBodyLg theme={theme} /><AboutMeLg theme={theme} /></>)}</>}/>
-            <Route path="/projects" element={<Suspense fallback={<Loader />}><ScrollTriggered /></Suspense>}/>
+            <Route path="/projects" element={<Suspense fallback={<Loader />}><ScrollTriggered theme={theme} /></Suspense>}/>
             <Route path="*" element={<ErrorPage />}
             />
           </Routes>

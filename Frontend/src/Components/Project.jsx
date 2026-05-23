@@ -1,16 +1,22 @@
 import * as motion from "motion/react-client"
 import { Helmet } from "react-helmet"
-export default function ScrollTriggered() {
+export default function ScrollTriggered({theme}) {
     return (
         <div style={container}>
 
             <Helmet>
                 <title>Pankeet Manubarwala | Full Stack Developer Projects</title>
+
+                <link rel="preload" href="/img/better-uptime.png" as="image" />
+                <link rel="preload" href="/img/excal.png" as="image" />
+                <link rel="preload" href="/img/Socket.png" as="image" />
+
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Explore full-stack projects built by Pankeet Manubarwala using React, Next.js, TypeScript, WebSockets, Prisma, and modern backend systems." />
-                <meta name="keywords" content="Pankeet, Pankeet Manubarwala, Full Stack Developer, React Developer, Next.js Projects, TypeScript, WebSockets, Portfolio, Software Engineer" />
+                <meta name="keywords" content="Pankeet, Pankeet Manubarwala, Next.js Projects, TypeScript, WebSockets, Portfolio, Software Engineer" />
                 <meta name="author" content="Pankeet Manubarwala" />
                 <meta name="robots" content="index, follow" />
+
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://pankeet-manubarwala.vercel.app/projects" />
                 <meta property="og:title" content="Pankeet | Full Stack Developer" />
@@ -19,35 +25,43 @@ export default function ScrollTriggered() {
                 <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/projects" />
             </Helmet>
 
-            {homepageSections.map(({content, hueA, hueB, i , href}) => (
-                <Card i={i} content={content} hueA={hueA} hueB={hueB} href={href} key={i} />
+            <h1 className={`text-4xl font-bold mb-10 bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent text-center`}>
+                My Full Stack Projects
+            </h1>
+
+            <div>
+                {homepageSections.map(({content, hueA, hueB, i , href, description}) => (
+                <Card i={i} content={content} hueA={hueA} hueB={hueB} href={href} key={i} description={description} theme={theme}/>
             ))}
+            </div>
         </div>
     )
 }
 
-function Card({ content , hueA, hueB, i , href }) {
+function Card({ content , hueA, hueB, i , href, description , theme }) {
     const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`
 
     return (
-        <a 
-            href={href} 
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none"}} >
-        <motion.div
-            className={`card-container-${i}`}
-            style={cardContainer}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ amount: 0.8 }}
-        >
-            <div style={{ ...splash, background }} />
-            <motion.div style={card} variants={cardVariants} className="card">
-                {content}
+            <a 
+                href={href} 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none"}} >
+                <h2 className={`text-2xl font-bold mb-10 bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent text-left`}>{description}:</h2>
+            <motion.div
+                className={`card-container-${i}`}
+                style={cardContainer}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ amount: 0.8 }}
+            >
+                <div style={{ ...splash, background }} />
+                <motion.div style={card} variants={cardVariants} className="card">
+                    {content}
+                </motion.div>
             </motion.div>
-        </motion.div>
-        </a>
+            </a>
+    
     )
 }
 
@@ -117,12 +131,12 @@ const card = {
  */
 
 const homepageSections = [
-    { content: <BetterUptime />, hueA: 250, hueB: 280  , href:"https://better-uptime-ochre.vercel.app/"},
-    { content: <ExcalDraw />,  hueA: 250, hueB: 280  , href:"https://excal-draw.vercel.app/" },
-    { content: <Socket />, hueA: 250, hueB: 280 , href:"https://socket-talk-liart.vercel.app/"},
-    { content: <Neuro />, hueA: 250, hueB: 280 , href:"https://neuro-nest-eta.vercel.app/" },
-    { content: <Ivy />, hueA: 250, hueB: 280  , href:"https://ivy-academy.vercel.app/"},
-    { content: <Zeroh />, hueA: 250, hueB: 280 , href:"https://zerohda.vercel.app/"}
+    { content: <BetterUptime />, hueA: 250, hueB: 280  , href:"https://better-uptime-ochre.vercel.app/", description: "Better Uptime"},
+    { content: <ExcalDraw />,  hueA: 250, hueB: 280  , href:"https://excal-draw.vercel.app/",description: "Excal.Draw" },
+    { content: <Socket />, hueA: 250, hueB: 280 , href:"https://socket-talk-liart.vercel.app/",description: "Socket Talk"},
+    { content: <Neuro />, hueA: 250, hueB: 280 , href:"https://neuro-nest-eta.vercel.app/",description: "Neuro Nest" },
+    { content: <Ivy />, hueA: 250, hueB: 280  , href:"https://ivy-academy.vercel.app/",description: "Ivy Academy (LMS)"},
+    { content: <Zeroh />, hueA: 250, hueB: 280 , href:"https://zerohda.vercel.app/",description: "Zerodha Clone"}
 ];
 
 function Ivy(){
@@ -139,7 +153,7 @@ function Zeroh(){
 
 function Socket(){
     return(
-        <img src="/img/Socket.png" alt="Socket Talk :- Real Time Chat Application" className="w-72 h-72" />
+        <img src="/img/Socket.png" alt="Socket Talk :- Real Time Chat Application" className="w-72 h-72" fetchPriority="high" loading="eager"/>
     )
 }
 
@@ -151,12 +165,12 @@ function Neuro(){
 
 function ExcalDraw(){
     return (
-        <img src="/img/excal.png" alt="Excal.Draw:- Collaborative Drawing App" className="w-72 h-72" />
+        <img src="/img/excal.png" alt="Excal.Draw:- Collaborative Drawing App" className="w-72 h-72" fetchPriority="high" loading="eager"/>
     )
 }
 
 function BetterUptime(){
     return (
-        <img src="/img/better-uptime.png" alt="Better-Uptime" className="w-72 h-72" />
+        <img src="/img/better-uptime.png" alt="Better-Uptime" className="w-72 h-72" fetchPriority="high" loading="eager"/>
     )
 }

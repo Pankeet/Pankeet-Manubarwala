@@ -2,7 +2,6 @@ import gsap from 'gsap';
 import { Typewriter } from 'react-simple-typewriter';
 import { FaGithub , FaLinkedin } from 'react-icons/fa';
 import { useLayoutEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
 IntroBodyLg.propTypes = {
@@ -13,7 +12,7 @@ export default function IntroBodyLg({theme}){
 
   useLayoutEffect(()=>{
     const tl = gsap.timeline();
-      tl.from("video", {
+      tl.from(".heroVideo", {
         opacity:0,
         x:30,
         duration: 0.6,
@@ -37,15 +36,6 @@ export default function IntroBodyLg({theme}){
   }, [])
     return (
       <div className='lg:h-screen w-full'>
-        <Helmet>
-          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta name="description" content="A comprehensive presentation of my professional identity, technical skill set, and practical experience" />
-          <meta property="og:title" content="Pankeet | Software Development Engineer" />
-          <meta property="og:description" content="Get to know me , my side hustles, and my TechStack" />
-          <meta property="og:image" content="https://pankeet-manubarwala.vercel.app/img/Logo.png" />
-          <link rel="canonical" href="https://pankeet-manubarwala.vercel.app/" />
-        </Helmet>
       <div className="mt-20 grid grid-cols-11">
       <main className='grid place-content-center col-span-6'>
         <div className = 'max-w-96 lg:text-2xl text-lg   font-semibold mb-1'>
@@ -60,12 +50,11 @@ export default function IntroBodyLg({theme}){
               delaySpeed={2000}></Typewriter>
           </span>
         </div>
-        <div className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Pankeet</b></div> 
-        <div className = {`myName text-6xl  font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}><b>Manubarwala</b></div>
+        <div><h1 className = {`myName text-6xl font-bold bg-gradient-to-r ${theme ? "from-blue-950 to-blue-900" : "to-purple-600 from-purple-700"} bg-clip-text text-transparent`}>Pankeet <br /> Manubarwala</h1></div> 
       </main>
       <div className = "col-span-5 grid place-content-center pt-20">
-        <video autoPlay loop muted alt="SDE" className={`imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>
-          <source src="/vid/Sde.mp4"></source>
+        <video autoPlay loop muted aria-label="Software developer animation" playsInline preload="auto" className={`heroVideo  imgCSS ${theme ? "brightness-105": "brightness-75"}  shadow-lg shadow-white`}>
+          <source src="/vid/Sde.mp4" type="video/mp4" />
         </video>
       </div>
       </div>
