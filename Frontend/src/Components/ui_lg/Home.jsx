@@ -41,7 +41,7 @@ export default function IntroBodyLg({theme}){
         <div className = 'max-w-96 lg:text-2xl text-lg   font-semibold mb-1'>
           <span className={`ml-1 ${theme ? "text-blue-950" : "text-slate-200"}`}>
             <Typewriter 
-              words={['C++ Programmer' , 'Software Developer', 'Computer Engineer' , 'Full Stack Developer' ]}
+              words={['Computer Engineer', 'Software Developer', 'Next.js Developer', 'C, C++, JAVA']}
               loop={true}
               cursor
               cursorStyle='|'
