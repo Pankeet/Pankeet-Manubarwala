@@ -82,7 +82,7 @@ export default function IntroBodySm({theme}){
               </a>
           </div>
           <div>
-          <a href="/files/Offer_Plus_Completion.pdf" 
+          <a href="https://www.linkedin.com/in/pankeet04/" 
               target="_blank" 
                 className="aboutCSS mx-28" >
                 View Experience

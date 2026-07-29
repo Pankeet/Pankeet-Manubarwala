@@ -5,7 +5,7 @@ export default function ScrollTriggered({theme}) {
         <div style={container}>
 
             <Helmet>
-                <title>Pankeet Manubarwala | Full Stack Developer Projects</title>
+                <title>Pankeet Manubarwala | Projects</title>
 
                 <link rel="preload" href="/img/better-uptime.png" as="image" />
                 <link rel="preload" href="/img/excal.png" as="image" />
@@ -13,7 +13,6 @@ export default function ScrollTriggered({theme}) {
 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Explore full-stack projects built by Pankeet Manubarwala using React, Next.js, TypeScript, WebSockets, Prisma, and modern backend systems." />
-                <meta name="keywords" content="Pankeet, Pankeet Manubarwala, Next.js Projects, TypeScript, WebSockets, Portfolio, Software Engineer" />
                 <meta name="author" content="Pankeet Manubarwala" />
                 <meta name="robots" content="index, follow" />
 
